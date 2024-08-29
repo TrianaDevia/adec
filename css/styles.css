@@ -1,5 +1,7 @@
 :root {
+    --naranjaMuyClaro: #f5efe7;
     --naranja: #ad6600;
+    --naranja2: #F96E14;
     --blanco: #fefefe;
     --celesteClaro: #90ccea;
     --celeste: #00b2cd;
@@ -38,7 +40,7 @@ body {
 }
 
 .boton {
-    background: var(--naranja);
+    background: var(--naranja2);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -111,7 +113,7 @@ header.abajo {
 }
 @media (max-width: 600px) {
     .logo {
-        height: 50px;
+        height: 60px;
     }
 }
 @media (min-width: 600px) and (max-width: 768px) {
@@ -121,11 +123,11 @@ header.abajo {
 }
 .nombre {
     width: auto;
-    height: 50px;
+    height: 60px;
 }
 @media (max-width: 600px) {
     .nombre {
-        height: 30px;
+        height: 40px;
     }
 }
 @media (min-width: 600px) and (max-width: 768px) {
@@ -483,7 +485,7 @@ header.abajo {
     color: var(--azulClaro);
 }
 .cardServicios__boton {
-    background-color: var(--naranja);
+    background-color: var(--naranja2);
     padding: 1rem 1.5rem;
     transition: 0.5s ease;
     width: 30%;
@@ -539,7 +541,7 @@ header.abajo {
     }
 }
 .cultura__texto--titulo span {
-    color: var(--naranja);
+    color: var(--naranja2);
     font-weight: 600;
 }
 .cultura__contenedor {
@@ -567,6 +569,13 @@ header.abajo {
     gap: .5rem;
     padding: 1rem;
     color: var(--negro);
+}
+@media (max-width: 600px) {
+    .cultura__caja {
+        width: 100%;
+        text-align: center;
+    }
+  
 }
 
 .vision {
@@ -607,6 +616,7 @@ header.abajo {
   .contanedor__testimonios {
     flex-direction: column;
     padding: 0;
+    gap: 2rem;
   }
 }
 .testimonios__titulo {
@@ -617,6 +627,7 @@ header.abajo {
 @media (max-width: 600px) {
     .testimonios__titulo {
         font-size: 1.3rem;
+        padding-bottom: 2rem;
     }
 }
 .snip1533 {
@@ -640,7 +651,13 @@ header.abajo {
     border-top: 5px solid var(--naranja);
     color: var(--blanco);
   }
-  
+  @media (max-width: 600px) {
+    .snip1533 {
+        width: 100%;
+        margin: 0;
+    }
+    
+  }
   .snip1533 *,
   .snip1533 *:before {
     -webkit-box-sizing: border-box;
@@ -714,6 +731,7 @@ header.abajo {
     .carruselMarcas__titulo {
         font-size: 1.3rem;
         text-align: center;
+        padding: 0 2rem;
     }
 }
 @keyframes scroll {
@@ -732,6 +750,12 @@ header.abajo {
     position: relative;
     width: 100%;
     padding: 3rem 0;
+}
+@media (max-width: 600px) {
+    .slider {
+        padding: 1rem 0;
+    }
+  
 }
 .slider::before, .slider::after {
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -819,7 +843,18 @@ header.abajo {
 }
 .formulario__titulo {
     font-size: 1.6rem;
-    color: var(--naranja);
+    color: var(--naranja2);
+}
+@media (max-width: 600px) {
+    .formulario__titulo {
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .formulario__subtitulo {
+        text-align: center;
+        padding-bottom: 1rem;
+    } 
 }
 .form__inputs {
     display: flex;
@@ -829,6 +864,12 @@ header.abajo {
     gap: 1rem;
     width: 300px;
     height: 100%;
+}
+@media (max-width: 600px) {
+    .form__inputs {
+        width: 250px;
+    }
+  
 }
 @media (min-width: 600px) and (max-width:768px) {
     .form__inputs {
@@ -857,7 +898,7 @@ border: 2px solid var(--azul);
     cursor: pointer;
     border: none;
     padding: 1rem 2rem;
-    background-color: var(--naranja);
+    background-color: var(--naranja2);
     color: white;
     font-weight: 700;
     transition: 0.5s ease;
@@ -930,6 +971,12 @@ border: 2px solid var(--azul);
   .gmail {
     margin-left: 53px;
   }
+  @media (max-width: 600px) {
+    .place, .phone, .gmail {
+        margin-left: 20px;
+    }
+    
+  }
   @media (min-width: 600px) and (max-width: 768px) {
     .place, .phone, .gmail {
         margin-left: 20px;
@@ -957,7 +1004,7 @@ border: 2px solid var(--azul);
     padding: 0;
   }
   .social-media-list p {
-    color: var(--blanco);
+    color: var(--naranja2);
   }
   .social-media-list a {
     color: var(--blanco);
