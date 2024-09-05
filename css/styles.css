@@ -1,7 +1,7 @@
 :root {
     --naranjaMuyClaro: #f5efe7;
     --naranja: #ad6600;
-    --naranja2: #F96E14;
+    --naranja2: #ce6c37;
     --blanco: #fefefe;
     --celesteClaro: #90ccea;
     --celeste: #00b2cd;
@@ -16,6 +16,7 @@
     --grisClaro: #f5f5f5;
     --grisAzulado: #e7e9ee;
     --whatsapp: #25d366;
+    --beigeClaro: #fff4df;
 
 }
 html {
@@ -241,7 +242,7 @@ header.abajo {
     }
 }
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/persona-feliz-contratando-servicios-de-adec-riego-por-aspersion-instalaciones-electricas-industriales.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/persona-feliz-contratando-servicios-de-adec-riego-por-aspersion-instalaciones-electricas-industriales.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -251,6 +252,12 @@ header.abajo {
     align-items: center;
     justify-content: center;
     padding: 5rem;
+    background-attachment: fixed;
+    text-align: center;
+}
+.aspersion {
+    background-image: url(../img/riego-por-aspersion-adec-mendoza.png);
+    background-position: left center;
 }
 @media (max-width: 600px) {
     .banner {
@@ -388,8 +395,14 @@ header.abajo {
         padding: 0;
     }
 }
+@media (min-width: 1024px) {
+    .containerServicios {
+        padding: 0;
+    }
+}
 .cardServicios {
     display: flex;
+    justify-content: space-between;
     gap: 5rem;
 }
 @media (max-width: 600px) {
@@ -412,8 +425,8 @@ header.abajo {
     }
 }
 .cardServicios__img {
-    width: 450px;
-    height: 300px;
+    width: 60%;
+    height: 100%;
 }
 @media (max-width: 600px) {
     .cardServicios__img {
@@ -429,8 +442,16 @@ header.abajo {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .cardServicios__img {
-        width: 50%;
-        height: 400px;
+        width: 60%;
+        height: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .cardServicios__img {
+        height: auto;
+    }
+    .cardServicios__img, .electrico, .solucionInteligente, .beneficios {
+        height: auto;
     }
 }
 .cardServicios__img, .riego {
@@ -443,7 +464,8 @@ header.abajo {
     background-size: cover;
     background-repeat: no-repeat;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (min-width: 1024px) {
     .cardServicios__img {
         background-position: left center;
     }
@@ -451,18 +473,41 @@ header.abajo {
 .electrico {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/instalaciones-electricas-industriales-adec.png);
 }
+.solucionInteligente {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/adec-solucion-inteligente-para-tu-jardin.png);
+    background-position: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .solucionInteligente {
+        background-position: top;
+    }
+}
+.beneficios {
+    background-image: url(../img/adec-beneficios-riego-por-aspersion.png);
+    background-position: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .beneficios {
+        background-position: top;
+    }
+}
 .cardServicios__texto {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
     width: 60%;
+    height: auto;
     color: var(--negro);
+    gap: 1rem;
+}
+.naranja {
+    color: var(--naranja2);
 }
 @media (max-width: 600px) {
     .cardServicios__texto {
         width: 100%;
         height: auto;
+        gap: 1rem;
     }
 }
 @media (min-width: 600px) and (max-width: 768px) {
@@ -477,9 +522,13 @@ header.abajo {
         height: auto;
     }
 }
-.cardServicios__texto h3 {
+.cardServicios__texto h2 {
     font-weight: 700;
     font-size: 1.6rem;
+}
+.cardServicios__texto h3 {
+    font-size: 1.4rem;
+
 }
 .cardServicios__texto i {
     color: var(--azulClaro);
@@ -488,7 +537,7 @@ header.abajo {
     background-color: var(--naranja2);
     padding: 1rem 1.5rem;
     transition: 0.5s ease;
-    width: 30%;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -516,9 +565,14 @@ header.abajo {
     color: var(--blanco);
     font-weight: 500;
 }
+.negrita {
+    color: var(--negro);
+    font-weight: 800;
+}
 .cultura {
-    background-color: var(--grisAzulado);
-    padding: 3rem 5rem;
+    background-image: url(../img/fondo-cultura-adec.png);
+    background-size: cover;
+    padding: 3rem 5rem 5rem;
 }
 @media (max-width: 600px) {
     .cultura {
@@ -530,9 +584,15 @@ header.abajo {
         padding: 3rem;
     } 
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cultura {
+        padding: 4rem;
+    }
+}
 .cultura__texto--titulo {
     text-align: center;
     font-size: 1.6rem;
+    padding-bottom: 3rem;
 }
 @media (max-width: 600px) {
     .cultura__texto--titulo {
@@ -550,14 +610,14 @@ header.abajo {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 0;
 }
 @media (max-width: 600px) {
     .cultura__contenedor {
         flex-direction: column;
-        padding: 0;
     }
 }
+
 .cultura__caja {
     width: 250px;
     height: 250px;
@@ -569,6 +629,7 @@ header.abajo {
     gap: .5rem;
     padding: 1rem;
     color: var(--negro);
+    text-align: center;
 }
 @media (max-width: 600px) {
     .cultura__caja {
@@ -584,14 +645,19 @@ header.abajo {
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--blanco);
+    font-weight: 500;
 }
+
 .cultura__caja img {
     width: 50px;
     height: auto;
 }
 .cultura__caja--titulo {
     font-weight: 700;
+    color: var(--naranja2);
+    font-size: 1.1rem;
 }
+
 /*TESTIMONIOS*/
 .testimonios {
     background-image: url(../img/adec-en-mendoza.png);
@@ -599,6 +665,7 @@ header.abajo {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 3rem;
+    background-attachment: fixed;
 }
 @media (max-width: 600px) {
     .testimonios {
@@ -794,8 +861,11 @@ header.abajo {
 .contacto {
     display: flex;
     padding: 5rem;
-    gap: 5rem;
-    background-color: var(--grisAzulado);
+    background-image: url(../img/fondo-contacto-adec.png);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    width: 100%;
 }
 @media (max-width: 600px) {
     .contacto {
@@ -814,8 +884,10 @@ header.abajo {
 @media (min-width: 768px) and (max-width: 1024px) {
     .contacto {
         padding: 4rem;
-        justify-content: space-between;
     }
+}
+.mapa iframe {
+    width: 120%;
 }
 @media (max-width: 600px) {
     .mapa iframe {
@@ -850,11 +922,9 @@ header.abajo {
         text-align: center;
     }
 }
-@media (max-width: 600px) {
-    .formulario__subtitulo {
-        text-align: center;
-        padding-bottom: 1rem;
-    } 
+.formulario__subtitulo {
+    padding-bottom: 1rem;
+    text-align: center;
 }
 .form__inputs {
     display: flex;
@@ -931,6 +1001,11 @@ border: 2px solid var(--azul);
 @media (min-width: 600px) and (max-width: 768px) {
     .footer {
         padding: 3rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        padding: 3rem 4rem;
     }
 }
 .footer__menu {
@@ -1144,3 +1219,82 @@ border: 2px solid var(--azul);
               transform: scale3d(1, 1, 1);
     }
   }
+/*************************************************PAGINA RIEGO                    *************************************************/
+.riego__caja {
+    width: 300px;
+    height: 350px;
+    background-color: transparent;
+    box-shadow: 10px 30px 90px -55px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid var(--azul) ;
+}
+@media (max-width: 600px) {
+  .riego__caja {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+    .riego__caja {
+        
+    }
+} 
+  
+.riego__caja img {
+    width: 80px;
+    height: auto;
+}
+.riego__caja--titulo {
+    color: var(--naranja2);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.cuidadoAmbiente {
+    background-image: url(../img/adec-compromiso-cuidado-ambiental.png);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 450px;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    text-align: center;
+    gap: 1rem;
+}
+@media (max-width: 600px) {
+    .cuidadoAmbiente {
+        padding: 2rem;
+    }
+  
+}
+.cuidadoAmbiente--div {
+   
+padding: 1rem;
+}
+.cuidadoAmbiente--titulo {
+    font-size: 1.4rem;
+}
+@media (max-width: 600px) {
+    .cuidadoAmbiente--titulo {
+        font-size: 1.3rem;
+    }
+}
+.cuidadoAmbiente--texto {
+    font-size: 1.2rem;
+}
+@media (max-width: 600px) {
+    .cuidadoAmbiente--texto {
+        font-size: 1rem;
+    }
+  
+}
+

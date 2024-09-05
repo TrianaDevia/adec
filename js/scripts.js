@@ -5,7 +5,7 @@ document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
    const templateID = 'template_x4fhw5s';
@@ -13,7 +13,8 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
+      alert('¡Mensaje enviado!');
+      location.reload();
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
