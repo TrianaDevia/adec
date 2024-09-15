@@ -256,8 +256,14 @@ header.abajo {
     text-align: center;
 }
 .aspersion {
-    background-image: url(../img/riego-por-aspersion-adec-mendoza.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/riego-por-aspersion-adec-mendoza.png);
     background-position: left center;
+}
+.riegoAgricola {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/riego-agricola-adec-mendoza.png);
+}
+.electricidad {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/adec-instalaciones-electricas-industriales.png);
 }
 @media (max-width: 600px) {
     .banner {
@@ -477,6 +483,9 @@ header.abajo {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/adec-solucion-inteligente-para-tu-jardin.png);
     background-position: center;
 }
+.agricola {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/riego-agricola-adec.png);
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     .solucionInteligente {
         background-position: top;
@@ -486,8 +495,26 @@ header.abajo {
     background-image: url(../img/adec-beneficios-riego-por-aspersion.png);
     background-position: center;
 }
+.goteo {
+    background-image: url(../img/adec-riego-por-goteo.png);
+}
+.pivote {
+    background-image: url(../img/adec-riego-por-pivote.png);
+}
+.puesta {
+    background-image: url(../img/adec-puesta-tierra.png);
+}
+.certificacion {
+    background-image: url(../img/adec-certificacion-puesta-tierra.png);
+}
+.proteccion {
+    background-image: url(../img/adec-proteccion-circuitos-electricos.png);
+}
+.diseño {
+    background-image: url(../img/adec-diseño-instalacion-electrica.png);
+}
 @media (min-width: 768px) and (max-width: 1024px) {
-    .beneficios {
+    .beneficios, .goteo, .pivote, .puesta, .certificacion, .proteccion, .diseño {
         background-position: top;
     }
 }
@@ -620,7 +647,7 @@ header.abajo {
 
 .cultura__caja {
     width: 250px;
-    height: 250px;
+    height: 350px;
     border: 2px solid var(--azul);
     display: flex;
     align-items: center;
@@ -1126,7 +1153,16 @@ border: 2px solid var(--azul);
   .social-media-list a:hover {
     color: #000;
   }
-  
+  .estelar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #01122b;
+  }
+  .logotipo__estelar {
+    width: 50px;
+    height: auto;
+  }
   
 /*ICONO WHATSAPP*/
 .icon__whatsapp {
@@ -1239,11 +1275,7 @@ border: 2px solid var(--azul);
     height: auto;
   }
 }
-@media (min-width: 600px) and (max-width: 768px) {
-    .riego__caja {
-        
-    }
-} 
+
   
 .riego__caja img {
     width: 80px;
@@ -1269,6 +1301,9 @@ border: 2px solid var(--azul);
     padding: 5rem;
     text-align: center;
     gap: 1rem;
+}
+.instalacionElectrica {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/adec-confianza-para-tu-empresa.png);
 }
 @media (max-width: 600px) {
     .cuidadoAmbiente {
@@ -1297,4 +1332,37 @@ padding: 1rem;
     }
   
 }
-
+/*************************************************PAGINA ELECTRICIDAD *************************************************/
+.serviciosElectricidad {
+    padding: 5rem;
+    background-color: var(--blanco);
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cardElectricidad {
+    background-color: var(--blanco);
+    width: 350px;
+    height: 450px;
+    box-shadow: 0px 0px 50px -4px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+.cardElectricidad__img {
+    background-image: url(../img/adec-puesta-tierra.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+}
+.cardElectricidad__texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
