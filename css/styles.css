@@ -103,7 +103,7 @@ header.abajo {
     padding: 0 3rem 0 3rem;
     }
 }
-.logotipo {
+.logotipo a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,7 +204,7 @@ header.abajo {
     }
 
     .closeMenu {
-        color: var(--azul);
+        color: var(--naranja2);
         font-size: 1.5rem;
         padding: 0 0 2rem 0;
     }
@@ -470,7 +470,11 @@ header.abajo {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cardServicios__img {
+        background-position: top;
+    }
+}
 @media (min-width: 1024px) {
     .cardServicios__img {
         background-position: left center;
