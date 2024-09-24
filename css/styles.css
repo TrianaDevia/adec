@@ -514,8 +514,8 @@ header.abajo {
 .proteccion {
     background-image: url(../img/adec-proteccion-circuitos-electricos.webp);
 }
-.diseño {
-    background-image: url(../img/instalaciones-electricas-industriales-adec.webp);
+.diseno {
+    background-image: url(../img/adec-diseno-instalacion-electrica.webp);
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .beneficios, .goteo, .pivote, .puesta, .certificacion, .proteccion, .diseño {
